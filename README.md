@@ -1,7 +1,7 @@
 
 # config-transform-docker
 
-Input JSON or JS config and
+Input JSON or JS config for environment variables and format for docker run CLI
 
 ## Test
 
@@ -29,7 +29,8 @@ curl -s https://raw.githubusercontent.com/evanx/config-transform-docker/master/t
   docker run -i \
   -e prepend='docker run' \
   -e append='evanxsummers/phantomjs-query' \
-  evanxsummers/config-transform-docker > ~/tmp/docker.run.sh
+  evanxsummers/config-transform-docker |
+  tee ~/tmp/docker.run.sh
 ```
 to specify first and last lines together with the config for a `docker run` script
 ```
@@ -37,6 +38,6 @@ docker run \
   -e url='https://news.ycombinator.com' \
   -e selector='a.storylink' \
   -e query='all' \
+  -e limit='3' \
   evanxsummers/phantomjs-query
 ```
-Which
