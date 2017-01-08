@@ -23,7 +23,7 @@ The output is the following:
 -e limit='3' \
 -e output='json' \
 ```
-which can then be cut and paste e.g. into a bash script for `docker run`
+where the properties have merely been reformatted with `-e` suitable for `docker run`
 
 Optionally use `prepend` and `append`
 ```
@@ -31,7 +31,7 @@ curl -s https://raw.githubusercontent.com/evanx/config-transform-docker/master/t
   docker run -i -e prepend='docker run' -e append='evanxsummers/phantomjs-query' \
   evanxsummers/config-transform-docker | tee ~/tmp/docker.run.sh
 ```
-to specify first and last lines together with the config for a `docker run` script
+to specify first and last lines together with the config for a `docker run` script e.g.
 ```
 docker run \
   -e url='https://news.ycombinator.com' \
