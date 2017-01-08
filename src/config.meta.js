@@ -1,10 +1,10 @@
 module.exports = {
-    firstLine: {
+    prepend: {
         required: false,
         description: 'first line',
         example: 'docker run'
     },
-    lastLine: {
+    append: {
         required: false,
         description: 'last line',
         example: 'authbot:latest'

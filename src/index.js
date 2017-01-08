@@ -28,8 +28,8 @@ async function main() {
         state.configContent = await getStdin();
         state.configContent = state.configContent.replace(/[ \t]\n/g, '\n').trim();
         const configObject = getConfigObject(state.configContent);
-        if (config.firstLine) {
-            console.log(config.firstLine, '\\');
+        if (config.prepend) {
+            console.log(config.prepend, '\\');
         }
         Object.keys(configObject).map(key => {
             const value = configObject[key];
@@ -38,8 +38,8 @@ async function main() {
             }
             console.log(`  -e ${key}='${value}' \\`);
         });
-        if (config.lastLine) {
-            console.log(`  ${config.lastLine}`);
+        if (config.append) {
+            console.log(`  ${config.append}`);
         }
     } catch (err) {
         console.log({state});
