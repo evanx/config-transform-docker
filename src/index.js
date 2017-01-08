@@ -12,6 +12,7 @@ async function debug() {
 }
 
 async function main() {
+    debug({config});
     try {
     } catch (err) {
         console.error(err);
