@@ -1,5 +1,5 @@
 
-module.exports = meta => Object.keys(meta).reduce((config, key) => {
+module.exports = configMeta => Object.keys(configMeta).reduce((config, key) => {
     const meta = configMeta[key];
     if (process.env[key]) {
         const value = process.env[key];
