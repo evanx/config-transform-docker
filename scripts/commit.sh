@@ -3,7 +3,7 @@ if [ $# -eq 1 ]
 then
   message="$1"
 else 
-  message=${message-update}
+  message=${message-initial}
 fi
 
   git add -A
