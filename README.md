@@ -1,7 +1,7 @@
 
 # config-transform-docker
 
-Input JSON or JS config for environment variables and format for docker run CLI
+Containerized util to format a docker run CLI with -e environment variables from input JSON or JS.
 
 ## Test
 
