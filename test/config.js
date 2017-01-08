@@ -1,7 +1,5 @@
 module.exports = {
-    domain: 'authtest.webserva.com',
-    port: 8841,
-    admin: 'evanxsummers',
-    bot: 'ExTestAuthBot',
-    logging: 'debug'
+    url: 'https://news.ycombinator.com',
+    selector: 'a.storylink',
+    query: 'all'
 };
