@@ -26,11 +26,8 @@ which can then be cut and paste e.g. into a bash script for `docker run`
 Optionally use `prepend` and `append`
 ```
 curl -s https://raw.githubusercontent.com/evanx/config-transform-docker/master/test/config.js |
-  docker run -i \
-  -e prepend='docker run' \
-  -e append='evanxsummers/phantomjs-query' \
-  evanxsummers/config-transform-docker |
-  tee ~/tmp/docker.run.sh
+  docker run -i -e prepend='docker run' -e append='evanxsummers/phantomjs-query' \
+  evanxsummers/config-transform-docker | tee ~/tmp/docker.run.sh
 ```
 to specify first and last lines together with the config for a `docker run` script
 ```
