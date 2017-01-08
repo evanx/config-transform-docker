@@ -16,7 +16,8 @@
   "dependencies": {
     "@f/require-content": "^1.0.2",
     "bluebird": "^3.4.6",
-    "get-stdin": "^5.0.1"
+    "get-stdin": "^5.0.1",
+    "winston": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "^3.12.2"
