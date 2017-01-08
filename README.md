@@ -10,7 +10,8 @@ echo "module.exports = {
     url: 'https://news.ycombinator.com',
     selector: 'a.storylink',
     query: 'all',
-    limit: 3
+    limit: 3,
+    output: 'json'
 };" | docker run -i evanxsummers/config-transform-docker
 ```
 
@@ -20,6 +21,7 @@ The output is the following:
 -e selector='a.storylink' \
 -e query='all' \
 -e limit='3' \
+-e output='json' \
 ```
 which can then be cut and paste e.g. into a bash script for `docker run`
 
@@ -36,5 +38,6 @@ docker run \
   -e selector='a.storylink' \
   -e query='all' \
   -e limit='3' \
+  -e output='json' \
   evanxsummers/phantomjs-query
 ```
