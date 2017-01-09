@@ -41,6 +41,4 @@ docker run \
   -e output='json' \
   evanxsummers/phantomjs-query
 ```
-where the first line i.e. `docker run` and the last line i.e. `evanxsummers/phantomjs-query` were configuration options for the `config-transform-docker` utility
-
-Those lines to be prepended and appended to the `-e` lines, which are according to the configuration file piped into the `config-transform-docker` utility
+where the first line i.e. `docker run` and the last line i.e. `evanxsummers/phantomjs-query` were configuration options for the `config-transform-docker` utility. The `-e` lines are according to the configuration file piped into the utility.
