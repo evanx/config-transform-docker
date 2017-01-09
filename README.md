@@ -31,6 +31,8 @@ curl -s https://raw.githubusercontent.com/evanx/config-transform-docker/master/t
   docker run -i -e prepend='docker run' -e append='evanxsummers/phantomjs-query' \
   evanxsummers/config-transform-docker | tee ~/tmp/docker.run.sh
 ```
+where the first line i.e. `docker run` and the last line i.e. `evanxsummers/phantomjs-query` were configuration options for the `config-transform-docker` utility. The `-e` lines are according to the configuration file piped into the utility.
+
 to specify the first and last lines for a ready-made `docker run` script e.g.
 ```
 docker run \
@@ -41,4 +43,3 @@ docker run \
   -e output='json' \
   evanxsummers/phantomjs-query
 ```
-where the first line i.e. `docker run` and the last line i.e. `evanxsummers/phantomjs-query` were configuration options for the `config-transform-docker` utility. The `-e` lines are according to the configuration file piped into the utility.
